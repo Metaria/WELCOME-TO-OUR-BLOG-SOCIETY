@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .para {
+            position: absolute;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: orange;
+            background-color: darkblue;
+            border-radius: 5px;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            animation: textmove 3s ease;
+            animation-fill-mode: forwards;
+            width: 80%;
+
+        }
+
+        #RETURNI {
+            position: absolute;
+            left: 25%;
+            top: 10%;
+            color: orange;
+            background-color: darkblue;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            animation: textmove 3s ease;
+            animation-fill-mode: forwards;
+        }
+
+        #NEXTI {
+            position: absolute;
+            right: 25%;
+            top: 10%;
+            color: orange;
+            background-color: darkblue;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            animation: textmove 3s ease;
+            animation-fill-mode: forwards;
+        }
+
+        #Prim {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            font-family: 'Times New Roman', Times, serif;
+            color: orange;
+            font-size: 25px;
+            border-radius: 10px;
+            animation: textmove 1s ease forwards, Beating 1s ease 1s infinite;
+      
+
+        }
+        #PrimPar1 {
+            top: 20%;
+            left: 10%;
+        }
+
+
+
+
+
+
+        #journa {
+            position: absolute;
+            left: 25%;
+            top: 20%;
+            width: 70vw;
+            width: 50vw;
+            animation: SHOWTIME 3s ease forwards;
+        }
+        #bgvideo {
+            position: fixed;
+
+            left: 0;
+            top: 0;
+
+            width: 100vw;
+            height: 100vh;
+
+            object-fit: cover;
+
+            z-index: -10;
+        }
+
+        
+
+       
+
+
+
+
+
+
+
+        body {
+            width: 1080px;
+            height: 1080px;
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+
+
+        @keyframes SHOWTIME {
+            from {
+                transform: scale(0.01);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes textmove {
+            from {
+                transform: translateY(-10000px);
+            }
+            to {
+                transform: translateY(1);
+            }
+
+        }
+        @keyframes Beating {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+    
+<body>
+    <form action="Main.html" method="get"><button type="submit" id="RETURNI">MAIN MENU</button></form>
+    <form action="Sixth.html" method="get"><button type="submit" id="NEXTI">PREVIOUS PAGE</button></form>
+
+    <video autoplay muted loop playsinline id="bgvideo">
+        <source src="S/PREVIEW-Aesthetic-Moon-Ocean.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <img src="S/JAMES.PNG" id="journa">
+
+    <script>
+
+        let buttonUNO = document.getElementById("Main");
+        let showelement = document.querySelectorAll(".IMGE");
+
+        function visibler() {
+
+            showelement.forEach(function(image) {
+                image.classList.add("SHOWY");
+            });
+
+            buttonUNO.classList.add("visiblee");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

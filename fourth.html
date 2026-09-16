@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .para {
+            position: absolute;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: orange;
+            background-color: darkblue;
+            border-radius: 5px;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            animation: textmove 3s ease;
+            animation-fill-mode: forwards;
+            width: 80%;
+            border-radius: 10px;
+
+        }
+
+        #RETURNI {
+            position: absolute;
+            left: 45%;
+            top: 10%;
+            color: orange;
+            background-color: darkblue;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            animation: textmove 3s ease;
+            animation-fill-mode: forwards;
+        }
+
+        #NEXTI {
+            position: absolute;
+            left: 45%;
+            top: 90%;
+            color: orange;
+            background-color: darkblue;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            animation: textmove 3s ease;
+            animation-fill-mode: forwards;
+        }
+
+        #Prim {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            font-family: 'Times New Roman', Times, serif;
+            color: orange;
+            font-size: 25px;
+            border-radius: 10px;
+            animation: textmove 1s ease forwards, Beating 1s ease 1s infinite;
+      
+
+        }
+        #PrimPar1 {
+            top: 20%;
+            left: 10%;
+        }
+
+
+
+
+
+
+
+        #bgvideo {
+            position: fixed;
+
+            left: 0;
+            top: 0;
+
+            width: 100vw;
+            height: 100vh;
+
+            object-fit: cover;
+
+            z-index: -10;
+        }
+
+        
+
+       
+
+
+
+
+
+
+
+        body {
+            width: 1080px;
+            height: 1080px;
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+
+
+        @keyframes SHOWTIME {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(25);
+            }
+        }
+
+        @keyframes textmove {
+            from {
+                transform: translateY(10000px);
+            }
+            to {
+                transform: translateY(1);
+            }
+
+        }
+        @keyframes Beating {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+    
+<body>
+    <form action="Main.html" method="get"><button type="submit" id="RETURNI">MAIN MENU</button></form>
+    <form action="third copy.html" method="get"><button type="submit" id="NEXTI">NEXT PAGE</button></form>
+    
+
+    <video autoplay muted loop playsinline id="bgvideo">
+        <source src="S/PREVIEW-Aesthetic-Moon-Ocean.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <H1 id="Prim">MY REFLECTION ON EFFECTIVE COMMUNICATION BY MARCUS ADRIAN G. BALINGIT</H1>
+    <p class="para" id="PrimPar1">
+        During our Effective Communication subject, I realized that communication is not simply about talking. It is also about listening and understanding what other people are saying, and knowing how to express yourself properly. Sometimes, even if we know what we want to say, the way we say it can affect how others understand us.
+
+The most memorable part of EffCom for me was doing skit performance task where we had to communicate and use tone to make our show entertaining. At first, I was sometimes nervous about expressing my ideas, but these activities helped me become more comfortable and confident.
+
+Overall, EffCom taught me that communication is something we use every day, not only in school but also with our friends, family, and other people. I realized that being a good communicator is not about speaking perfectly. It is about being able to understand others and make yourself understood. 
+</p>
+
+    <script>
+
+        let buttonUNO = document.getElementById("Main");
+        let showelement = document.querySelectorAll(".IMGE");
+
+        function visibler() {
+
+            showelement.forEach(function(image) {
+                image.classList.add("SHOWY");
+            });
+
+            buttonUNO.classList.add("visiblee");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

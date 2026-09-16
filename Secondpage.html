@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .para {
+            position: absolute;
+            font-family: 'Times New Roman', Times, serif;
+            color: orange;
+            background-color: darkblue;
+            border-radius: 10px;
+            font-size: 50px;
+            animation: textmove 3s ease;
+            animation-fill-mode: forwards;
+
+        }
+
+        #RETURNI {
+            position: absolute;
+            left: 45%;
+            top: 10%;
+            color: orange;
+            background-color: darkblue;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            animation: textmove 3s ease;
+            animation-fill-mode: forwards;
+        }
+
+        #Prim {
+            position: absolute;
+            top: 30%;
+            left: 7%;
+            font-family: 'Times New Roman', Times, serif;
+            color: orange;
+            font-size: xx-large;
+            border-radius: 10px;
+            animation: textmove 1s ease forwards, Beating 1s ease 1s infinite;
+
+        }
+        #Sec {
+            position: absolute;
+            top: 30%;
+            right: 7%;
+            font-family: 'Times New Roman', Times, serif;
+            color: orange;
+            font-size: xx-large;
+            border-radius: 10px;
+            animation: textmove 1s ease forwards, Beating 1s ease 1s infinite;
+        }
+        #PrimPar1 {
+            top: 35%;
+            left: 7%;
+        }
+        #SecPar1 {
+            top: 35%;
+            right: 7%;
+        }
+        #PrimPar2 {
+            top: 45%;
+            left: 7%;
+        }
+        #SecPar2 {
+            top: 45%;
+            right: 7%;
+        }   
+        #PrimPar3 {
+            top: 55%;
+            left: 7%;
+        }
+        #SecPar3 {
+            top: 55%;
+            right: 7%;
+        }
+
+
+
+
+        #bgvideo {
+            position: fixed;
+
+            left: 0;
+            top: 0;
+
+            width: 100vw;
+            height: 100vh;
+
+            object-fit: cover;
+
+            z-index: -10;
+        }
+
+        .IMGE {
+            height: 1%;
+            width: 1%;
+            visibility: visible;
+            border-radius: 10%;
+            animation: SHOWTIME 5s ease;
+            animation-fill-mode: forwards;
+        }
+
+        #imgONE {
+            position: absolute;
+            left: 20%;
+            bottom: 80%;
+        }
+
+        #imgTWO {
+            position: absolute;
+            left: 80%;
+            bottom: 80%;
+        }
+
+        
+
+       
+
+
+
+
+
+
+
+        body {
+            width: 1080px;
+            height: 1080px;
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+
+
+        @keyframes SHOWTIME {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(25);
+            }
+        }
+
+        @keyframes textmove {
+            from {
+                transform: translateY(10000px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(1);
+                opacity: 1;
+            }
+
+        }
+        @keyframes Beating {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+    
+<body>
+    <form action="Main.html" method="get"><button type="submit" id="RETURNI">MAIN MENU</button></form>
+    
+
+    <video autoplay muted loop playsinline id="bgvideo">
+        <source src="S/PREVIEW-Aesthetic-Moon-Ocean.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <img src="S/picmarc.png" class="IMGE" id="imgONE">
+    <img src="S/JAMES PIC.png" class="IMGE" id="imgTWO">
+
+    <H1 id="Prim">MARCUS ADRIAN GERONIMO BALINGIT</H1>
+    <H1 id="Sec">JAMES GABRIELLE VILLARIZA</H1>
+    <p class="para" id="PrimPar1">AGE: 16</p>
+    <p class="para" id="SecPar1">AGE: 17</p>
+    <p class="para" id="PrimPar2">BIRTHDAY: NOVEMBER 1 2009</p>
+    <p class="para" id="SecPar2">BIRTHDAY: NOVEMBER 17 2008</p>
+    <p class="para" id="PrimPar3">DREAM JOB: AI ENGINEERING</p>
+    <p class="para" id="SecPar3">DREAM JOB: SOFTWARE DEVELOPER</p>
+
+    <script>
+
+        let buttonUNO = document.getElementById("Main");
+        let showelement = document.querySelectorAll(".IMGE");
+
+        function visibler() {
+
+            showelement.forEach(function(image) {
+                image.classList.add("SHOWY");
+            });
+
+            buttonUNO.classList.add("visiblee");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

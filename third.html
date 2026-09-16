@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .para {
+            position: absolute;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: orange;
+            background-color: darkblue;
+            border-radius: 5px;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            animation: textmove 3s ease;
+            animation-fill-mode: forwards;
+            width: 80%;
+            border-radius: 10px;
+
+        }
+
+        #RETURNI {
+            position: absolute;
+            left: 45%;
+            top: 10%;
+            color: orange;
+            background-color: darkblue;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            animation: textmove 3s ease;
+            animation-fill-mode: forwards;
+        }
+
+        #NEXTI {
+            position: absolute;
+            left: 45%;
+            top: 90%;
+            color: orange;
+            background-color: darkblue;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            animation: textmove 3s ease;
+            animation-fill-mode: forwards;
+        }
+
+        #Prim {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            font-family: 'Times New Roman', Times, serif;
+            color: orange;
+            font-size: 25px;
+            border-radius: 10px;
+            animation: textmove 1s ease forwards, Beating 1s ease 1s infinite;
+
+        }
+        #PrimPar1 {
+            top: 20%;
+            left: 10%;
+        }
+
+
+
+
+
+
+
+        #bgvideo {
+            position: fixed;
+
+            left: 0;
+            top: 0;
+
+            width: 100vw;
+            height: 100vh;
+
+            object-fit: cover;
+
+            z-index: -10;
+        }
+
+        
+
+       
+
+
+
+
+
+
+
+        body {
+            width: 1080px;
+            height: 1080px;
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+
+        @keyframes Beating {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes SHOWTIME {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(25);
+            }
+        }
+
+        @keyframes textmove {
+            from {
+                transform: translateX(10000px);
+            }
+            to {
+                transform: translateX(1);
+            }
+
+        }
+
+    </style>
+</head>
+    
+<body>
+    <form action="Main.html" method="get"><button type="submit" id="RETURNI">MAIN MENU</button></form>
+    <form action="fourth.html" method="get"><button type="submit" id="NEXTI">NEXT PAGE</button></form>
+    
+
+    <video autoplay muted loop playsinline id="bgvideo">
+        <source src="S/PREVIEW-Aesthetic-Moon-Ocean.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <H1 id="Prim">MY REFLECTION ON MY MOCK INTERVIEW, BY MARCUS ADRIAN G. BALINGIT</H1>
+    <p class="para" id="PrimPar1">
+        After the interview, I realized that every person has something they want to achieve and dream about. We all have different goals, and even if we choose the same career path, our reasons and experiences can still be different. Some people may take a certain course because it can help them reach their real goals, while others may discover what they truly want along the way.
+
+I also learned that having the same career path does not mean that we will learn the exact same things. We can have different skills, interests, and experiences that make us unique. For example, even if we are both interested in ICT, one person might be better at programming while another might be better at troubleshooting or using different technologies.
+
+This interview made me realize that learning is not only about getting good grades or finishing a course. It is also about gaining experience, improving our skills, and discovering what we are capable of doing. We may not know exactly where our journey will take us, but we can continue learning and improving as we move forward.
+
+Overall, the interview taught me that everyone has their own journey toward their dreams. We may walk on the same path as others, but the way we reach our goals will always be different. What matters is that we keep trying, keep learning, and never give up on what we want to achieve.
+</p>
+
+    <script>
+
+        let buttonUNO = document.getElementById("Main");
+        let showelement = document.querySelectorAll(".IMGE");
+
+        function visibler() {
+
+            showelement.forEach(function(image) {
+                image.classList.add("SHOWY");
+            });
+
+            buttonUNO.classList.add("visiblee");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
